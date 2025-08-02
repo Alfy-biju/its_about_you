@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  background: #111;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 90vw;
+  max-width: 700px;
+  aspect-ratio: 4/3;
+  border: 10px solid #ff00ff;
+  box-shadow: 0 0 20px #ff00ff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+video#mirror {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.2) brightness(1.1);
+}
+
+#compliment {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.6);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ff00ff;
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #fff;
+  color: #ff00ff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
